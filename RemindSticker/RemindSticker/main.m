@@ -1,8 +1,8 @@
 //
 //  main.m
-//  SampleZXing3
+//  RemindSticker
 //
-//  Created by 池田昂平 on 2014/08/09.
+//  Created by 池田昂平 on 2014/08/12.
 //  Copyright (c) 2014年 池田昂平. All rights reserved.
 //
 

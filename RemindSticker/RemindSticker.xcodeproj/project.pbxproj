@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55B5D796199A4E2A004F26E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D795199A4E2A004F26E6 /* Foundation.framework */; };
+		55B5D798199A4E2A004F26E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D797199A4E2A004F26E6 /* CoreGraphics.framework */; };
+		55B5D79A199A4E2A004F26E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D799199A4E2A004F26E6 /* UIKit.framework */; };
+		55B5D7A0199A4E2A004F26E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55B5D79E199A4E2A004F26E6 /* InfoPlist.strings */; };
+		55B5D7A2199A4E2A004F26E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B5D7A1199A4E2A004F26E6 /* main.m */; };
+		55B5D7A6199A4E2A004F26E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B5D7A5199A4E2A004F26E6 /* AppDelegate.m */; };
+		55B5D7A9199A4E2A004F26E6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B5D7A7199A4E2A004F26E6 /* Main_iPhone.storyboard */; };
+		55B5D7AC199A4E2A004F26E6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B5D7AA199A4E2A004F26E6 /* Main_iPad.storyboard */; };
+		55B5D7AF199A4E2A004F26E6 /* MasterViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55B5D7AE199A4E2A004F26E6 /* MasterViewController.mm */; };
+		55B5D7B2199A4E2A004F26E6 /* DetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55B5D7B1199A4E2A004F26E6 /* DetailViewController.mm */; };
+		55B5D7B4199A4E2A004F26E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B5D7B3199A4E2A004F26E6 /* Images.xcassets */; };
+		55B5D7BB199A4E2A004F26E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D7BA199A4E2A004F26E6 /* XCTest.framework */; };
+		55B5D7BC199A4E2A004F26E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D795199A4E2A004F26E6 /* Foundation.framework */; };
+		55B5D7BD199A4E2A004F26E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D799199A4E2A004F26E6 /* UIKit.framework */; };
+		55B5D7C5199A4E2A004F26E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55B5D7C3199A4E2A004F26E6 /* InfoPlist.strings */; };
+		55B5D7C7199A4E2A004F26E6 /* RemindStickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B5D7C6199A4E2A004F26E6 /* RemindStickerTests.m */; };
+		55B5D807199A4FFC004F26E6 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D804199A4FBE004F26E6 /* libZXingWidget.a */; };
+		55B5D80B199A5061004F26E6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D80A199A5061004F26E6 /* AVFoundation.framework */; };
+		55B5D80D199A506B004F26E6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D80C199A506B004F26E6 /* AudioToolbox.framework */; };
+		55B5D80F199A5072004F26E6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D80E199A5072004F26E6 /* CoreVideo.framework */; };
+		55B5D811199A5084004F26E6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D810199A5084004F26E6 /* CoreMedia.framework */; };
+		55B5D813199A5093004F26E6 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D812199A5093004F26E6 /* libiconv.dylib */; };
+		55B5D816199A509D004F26E6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D814199A509D004F26E6 /* AddressBook.framework */; };
+		55B5D817199A509D004F26E6 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D815199A509D004F26E6 /* AddressBookUI.framework */; };
+		55B5D81B199B447D004F26E6 /* carrot.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B5D81A199B447D004F26E6 /* carrot.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55B5D7BE199A4E2A004F26E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55B5D78A199A4E2A004F26E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55B5D791199A4E2A004F26E6;
+			remoteInfo = RemindSticker;
+		};
+		55B5D803199A4FBE004F26E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55B5D7FE199A4FBE004F26E6 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		55B5D805199A4FBE004F26E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55B5D7FE199A4FBE004F26E6 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
+		55B5D808199A5011004F26E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55B5D7FE199A4FBE004F26E6 /* ZXingWidget.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55B5D792199A4E2A004F26E6 /* RemindSticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindSticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B5D795199A4E2A004F26E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55B5D797199A4E2A004F26E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55B5D799199A4E2A004F26E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55B5D79D199A4E2A004F26E6 /* RemindSticker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemindSticker-Info.plist"; sourceTree = "<group>"; };
+		55B5D79F199A4E2A004F26E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55B5D7A1199A4E2A004F26E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55B5D7A3199A4E2A004F26E6 /* RemindSticker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemindSticker-Prefix.pch"; sourceTree = "<group>"; };
+		55B5D7A4199A4E2A004F26E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55B5D7A5199A4E2A004F26E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55B5D7A8199A4E2A004F26E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		55B5D7AB199A4E2A004F26E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		55B5D7AD199A4E2A004F26E6 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		55B5D7AE199A4E2A004F26E6 /* MasterViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MasterViewController.mm; sourceTree = "<group>"; };
+		55B5D7B0199A4E2A004F26E6 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		55B5D7B1199A4E2A004F26E6 /* DetailViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DetailViewController.mm; sourceTree = "<group>"; };
+		55B5D7B3199A4E2A004F26E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55B5D7B9199A4E2A004F26E6 /* RemindStickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindStickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B5D7BA199A4E2A004F26E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		55B5D7C2199A4E2A004F26E6 /* RemindStickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemindStickerTests-Info.plist"; sourceTree = "<group>"; };
+		55B5D7C4199A4E2A004F26E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55B5D7C6199A4E2A004F26E6 /* RemindStickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemindStickerTests.m; sourceTree = "<group>"; };
+		55B5D7FE199A4FBE004F26E6 /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "../zxing-2.3.0/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = "<group>"; };
+		55B5D80A199A5061004F26E6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		55B5D80C199A506B004F26E6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		55B5D80E199A5072004F26E6 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		55B5D810199A5084004F26E6 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		55B5D812199A5093004F26E6 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		55B5D814199A509D004F26E6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		55B5D815199A509D004F26E6 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		55B5D81A199B447D004F26E6 /* carrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = carrot.png; path = "../../../../Axis金の卵展/シールと導電テープ/使用イメージ作成の素材/carrot.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55B5D78F199A4E2A004F26E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B5D816199A509D004F26E6 /* AddressBook.framework in Frameworks */,
+				55B5D817199A509D004F26E6 /* AddressBookUI.framework in Frameworks */,
+				55B5D813199A5093004F26E6 /* libiconv.dylib in Frameworks */,
+				55B5D811199A5084004F26E6 /* CoreMedia.framework in Frameworks */,
+				55B5D80F199A5072004F26E6 /* CoreVideo.framework in Frameworks */,
+				55B5D80D199A506B004F26E6 /* AudioToolbox.framework in Frameworks */,
+				55B5D80B199A5061004F26E6 /* AVFoundation.framework in Frameworks */,
+				55B5D807199A4FFC004F26E6 /* libZXingWidget.a in Frameworks */,
+				55B5D798199A4E2A004F26E6 /* CoreGraphics.framework in Frameworks */,
+				55B5D79A199A4E2A004F26E6 /* UIKit.framework in Frameworks */,
+				55B5D796199A4E2A004F26E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B5D7B6199A4E2A004F26E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B5D7BB199A4E2A004F26E6 /* XCTest.framework in Frameworks */,
+				55B5D7BD199A4E2A004F26E6 /* UIKit.framework in Frameworks */,
+				55B5D7BC199A4E2A004F26E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55B5D789199A4E2A004F26E6 = {
+			isa = PBXGroup;
+			children = (
+				55B5D7FE199A4FBE004F26E6 /* ZXingWidget.xcodeproj */,
+				55B5D79B199A4E2A004F26E6 /* RemindSticker */,
+				55B5D7C0199A4E2A004F26E6 /* RemindStickerTests */,
+				55B5D794199A4E2A004F26E6 /* Frameworks */,
+				55B5D793199A4E2A004F26E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55B5D793199A4E2A004F26E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55B5D792199A4E2A004F26E6 /* RemindSticker.app */,
+				55B5D7B9199A4E2A004F26E6 /* RemindStickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55B5D794199A4E2A004F26E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55B5D814199A509D004F26E6 /* AddressBook.framework */,
+				55B5D815199A509D004F26E6 /* AddressBookUI.framework */,
+				55B5D812199A5093004F26E6 /* libiconv.dylib */,
+				55B5D810199A5084004F26E6 /* CoreMedia.framework */,
+				55B5D80E199A5072004F26E6 /* CoreVideo.framework */,
+				55B5D80C199A506B004F26E6 /* AudioToolbox.framework */,
+				55B5D80A199A5061004F26E6 /* AVFoundation.framework */,
+				55B5D795199A4E2A004F26E6 /* Foundation.framework */,
+				55B5D797199A4E2A004F26E6 /* CoreGraphics.framework */,
+				55B5D799199A4E2A004F26E6 /* UIKit.framework */,
+				55B5D7BA199A4E2A004F26E6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55B5D79B199A4E2A004F26E6 /* RemindSticker */ = {
+			isa = PBXGroup;
+			children = (
+				55B5D7A4199A4E2A004F26E6 /* AppDelegate.h */,
+				55B5D7A5199A4E2A004F26E6 /* AppDelegate.m */,
+				55B5D7A7199A4E2A004F26E6 /* Main_iPhone.storyboard */,
+				55B5D7AA199A4E2A004F26E6 /* Main_iPad.storyboard */,
+				55B5D7AD199A4E2A004F26E6 /* MasterViewController.h */,
+				55B5D7AE199A4E2A004F26E6 /* MasterViewController.mm */,
+				55B5D7B0199A4E2A004F26E6 /* DetailViewController.h */,
+				55B5D7B1199A4E2A004F26E6 /* DetailViewController.mm */,
+				55B5D7B3199A4E2A004F26E6 /* Images.xcassets */,
+				55B5D79C199A4E2A004F26E6 /* Supporting Files */,
+			);
+			path = RemindSticker;
+			sourceTree = "<group>";
+		};
+		55B5D79C199A4E2A004F26E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55B5D81A199B447D004F26E6 /* carrot.png */,
+				55B5D79D199A4E2A004F26E6 /* RemindSticker-Info.plist */,
+				55B5D79E199A4E2A004F26E6 /* InfoPlist.strings */,
+				55B5D7A1199A4E2A004F26E6 /* main.m */,
+				55B5D7A3199A4E2A004F26E6 /* RemindSticker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55B5D7C0199A4E2A004F26E6 /* RemindStickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				55B5D7C6199A4E2A004F26E6 /* RemindStickerTests.m */,
+				55B5D7C1199A4E2A004F26E6 /* Supporting Files */,
+			);
+			path = RemindStickerTests;
+			sourceTree = "<group>";
+		};
+		55B5D7C1199A4E2A004F26E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55B5D7C2199A4E2A004F26E6 /* RemindStickerTests-Info.plist */,
+				55B5D7C3199A4E2A004F26E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55B5D7FF199A4FBE004F26E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55B5D804199A4FBE004F26E6 /* libZXingWidget.a */,
+				55B5D806199A4FBE004F26E6 /* ZXingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55B5D791199A4E2A004F26E6 /* RemindSticker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B5D7CA199A4E2A004F26E6 /* Build configuration list for PBXNativeTarget "RemindSticker" */;
+			buildPhases = (
+				55B5D78E199A4E2A004F26E6 /* Sources */,
+				55B5D78F199A4E2A004F26E6 /* Frameworks */,
+				55B5D790199A4E2A004F26E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55B5D809199A5011004F26E6 /* PBXTargetDependency */,
+			);
+			name = RemindSticker;
+			productName = RemindSticker;
+			productReference = 55B5D792199A4E2A004F26E6 /* RemindSticker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55B5D7B8199A4E2A004F26E6 /* RemindStickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B5D7CD199A4E2A004F26E6 /* Build configuration list for PBXNativeTarget "RemindStickerTests" */;
+			buildPhases = (
+				55B5D7B5199A4E2A004F26E6 /* Sources */,
+				55B5D7B6199A4E2A004F26E6 /* Frameworks */,
+				55B5D7B7199A4E2A004F26E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55B5D7BF199A4E2A004F26E6 /* PBXTargetDependency */,
+			);
+			name = RemindStickerTests;
+			productName = RemindStickerTests;
+			productReference = 55B5D7B9199A4E2A004F26E6 /* RemindStickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55B5D78A199A4E2A004F26E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "池田昂平";
+				TargetAttributes = {
+					55B5D7B8199A4E2A004F26E6 = {
+						TestTargetID = 55B5D791199A4E2A004F26E6;
+					};
+				};
+			};
+			buildConfigurationList = 55B5D78D199A4E2A004F26E6 /* Build configuration list for PBXProject "RemindSticker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55B5D789199A4E2A004F26E6;
+			productRefGroup = 55B5D793199A4E2A004F26E6 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 55B5D7FF199A4FBE004F26E6 /* Products */;
+					ProjectRef = 55B5D7FE199A4FBE004F26E6 /* ZXingWidget.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				55B5D791199A4E2A004F26E6 /* RemindSticker */,
+				55B5D7B8199A4E2A004F26E6 /* RemindStickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		55B5D804199A4FBE004F26E6 /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = 55B5D803199A4FBE004F26E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		55B5D806199A4FBE004F26E6 /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = 55B5D805199A4FBE004F26E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55B5D790199A4E2A004F26E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B5D7AC199A4E2A004F26E6 /* Main_iPad.storyboard in Resources */,
+				55B5D7B4199A4E2A004F26E6 /* Images.xcassets in Resources */,
+				55B5D7A9199A4E2A004F26E6 /* Main_iPhone.storyboard in Resources */,
+				55B5D81B199B447D004F26E6 /* carrot.png in Resources */,
+				55B5D7A0199A4E2A004F26E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B5D7B7199A4E2A004F26E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B5D7C5199A4E2A004F26E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55B5D78E199A4E2A004F26E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B5D7A6199A4E2A004F26E6 /* AppDelegate.m in Sources */,
+				55B5D7AF199A4E2A004F26E6 /* MasterViewController.mm in Sources */,
+				55B5D7A2199A4E2A004F26E6 /* main.m in Sources */,
+				55B5D7B2199A4E2A004F26E6 /* DetailViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B5D7B5199A4E2A004F26E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B5D7C7199A4E2A004F26E6 /* RemindStickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55B5D7BF199A4E2A004F26E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55B5D791199A4E2A004F26E6 /* RemindSticker */;
+			targetProxy = 55B5D7BE199A4E2A004F26E6 /* PBXContainerItemProxy */;
+		};
+		55B5D809199A5011004F26E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZXingWidget;
+			targetProxy = 55B5D808199A5011004F26E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55B5D79E199A4E2A004F26E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B5D79F199A4E2A004F26E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		55B5D7A7199A4E2A004F26E6 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B5D7A8199A4E2A004F26E6 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		55B5D7AA199A4E2A004F26E6 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B5D7AB199A4E2A004F26E6 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		55B5D7C3199A4E2A004F26E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B5D7C4199A4E2A004F26E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55B5D7C8199A4E2A004F26E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55B5D7C9199A4E2A004F26E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55B5D7CB199A4E2A004F26E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemindSticker/RemindSticker-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../zxing-2.3.0/cpp/core/src",
+					"../zxing-2.3.0/iphone/ZXingWidget/Classes/**",
+				);
+				INFOPLIST_FILE = "RemindSticker/RemindSticker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		55B5D7CC199A4E2A004F26E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemindSticker/RemindSticker-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../zxing-2.3.0/cpp/core/src",
+					"../zxing-2.3.0/iphone/ZXingWidget/Classes/**",
+				);
+				INFOPLIST_FILE = "RemindSticker/RemindSticker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55B5D7CE199A4E2A004F26E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RemindSticker.app/RemindSticker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemindSticker/RemindSticker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RemindStickerTests/RemindStickerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		55B5D7CF199A4E2A004F26E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RemindSticker.app/RemindSticker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemindSticker/RemindSticker-Prefix.pch";
+				INFOPLIST_FILE = "RemindStickerTests/RemindStickerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55B5D78D199A4E2A004F26E6 /* Build configuration list for PBXProject "RemindSticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B5D7C8199A4E2A004F26E6 /* Debug */,
+				55B5D7C9199A4E2A004F26E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55B5D7CA199A4E2A004F26E6 /* Build configuration list for PBXNativeTarget "RemindSticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B5D7CB199A4E2A004F26E6 /* Debug */,
+				55B5D7CC199A4E2A004F26E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55B5D7CD199A4E2A004F26E6 /* Build configuration list for PBXNativeTarget "RemindStickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B5D7CE199A4E2A004F26E6 /* Debug */,
+				55B5D7CF199A4E2A004F26E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55B5D78A199A4E2A004F26E6 /* Project object */;
+}

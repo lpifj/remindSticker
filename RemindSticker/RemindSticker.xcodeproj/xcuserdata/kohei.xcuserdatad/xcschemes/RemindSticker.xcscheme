@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "55888B4B19964A8800B57243"
-               BuildableName = "SampleZXing3.app"
-               BlueprintName = "SampleZXing3"
-               ReferencedContainer = "container:SampleZXing3.xcodeproj">
+               BlueprintIdentifier = "55B5D791199A4E2A004F26E6"
+               BuildableName = "RemindSticker.app"
+               BlueprintName = "RemindSticker"
+               ReferencedContainer = "container:RemindSticker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "55888B6F19964A8800B57243"
-               BuildableName = "SampleZXing3Tests.xctest"
-               BlueprintName = "SampleZXing3Tests"
-               ReferencedContainer = "container:SampleZXing3.xcodeproj">
+               BlueprintIdentifier = "55B5D7B8199A4E2A004F26E6"
+               BuildableName = "RemindStickerTests.xctest"
+               BlueprintName = "RemindStickerTests"
+               ReferencedContainer = "container:RemindSticker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "55888B4B19964A8800B57243"
-            BuildableName = "SampleZXing3.app"
-            BlueprintName = "SampleZXing3"
-            ReferencedContainer = "container:SampleZXing3.xcodeproj">
+            BlueprintIdentifier = "55B5D791199A4E2A004F26E6"
+            BuildableName = "RemindSticker.app"
+            BlueprintName = "RemindSticker"
+            ReferencedContainer = "container:RemindSticker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "55888B4B19964A8800B57243"
-            BuildableName = "SampleZXing3.app"
-            BlueprintName = "SampleZXing3"
-            ReferencedContainer = "container:SampleZXing3.xcodeproj">
+            BlueprintIdentifier = "55B5D791199A4E2A004F26E6"
+            BuildableName = "RemindSticker.app"
+            BlueprintName = "RemindSticker"
+            ReferencedContainer = "container:RemindSticker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "55888B4B19964A8800B57243"
-            BuildableName = "SampleZXing3.app"
-            BlueprintName = "SampleZXing3"
-            ReferencedContainer = "container:SampleZXing3.xcodeproj">
+            BlueprintIdentifier = "55B5D791199A4E2A004F26E6"
+            BuildableName = "RemindSticker.app"
+            BlueprintName = "RemindSticker"
+            ReferencedContainer = "container:RemindSticker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

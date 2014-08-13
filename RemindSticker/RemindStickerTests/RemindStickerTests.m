@@ -1,18 +1,18 @@
 //
-//  SampleZXing3Tests.m
-//  SampleZXing3Tests
+//  RemindStickerTests.m
+//  RemindStickerTests
 //
-//  Created by 池田昂平 on 2014/08/09.
+//  Created by 池田昂平 on 2014/08/12.
 //  Copyright (c) 2014年 池田昂平. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface SampleZXing3Tests : XCTestCase
+@interface RemindStickerTests : XCTestCase
 
 @end
 
-@implementation SampleZXing3Tests
+@implementation RemindStickerTests
 
 - (void)setUp
 {
