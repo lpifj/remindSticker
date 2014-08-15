@@ -20,6 +20,10 @@
     }
     return YES;
 }
+
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    return YES;
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -46,6 +50,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
+    // 状態を保存して良ければYESを返す
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder {
+    // アプリのバージョン違いを検出してRestoreをやめたりするならここで
+    return YES;
 }
 
 @end

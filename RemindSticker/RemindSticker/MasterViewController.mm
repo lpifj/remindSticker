@@ -17,9 +17,14 @@
     //2次元コードから取得した文字列の集まり(配列)
     NSArray *array;
     //パ-スした文字列(カテゴリ)
-    NSString *category;
+    NSMutableString *category;
+    //リストに表示用の文字列(カテゴリ)
+    NSString *category_desc;
+    
     //パ-スした文字列(期間)
-    NSString *span;
+    NSMutableString *span;
+    NSString *span_desc;
+    
     //カメラで撮った画像
     UIImage *image;
 }
@@ -99,18 +104,30 @@
 //新たなセルを追加
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (cell == nil) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+        
+    }else{
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+    }
 
     //セルに文字列を挿入
 //    NSDate *object = _objects[indexPath.row];
 //    cell.textLabel.text = [object description];
-    cell.textLabel.text = span;
+    cell.textLabel.text = span_desc;
+    cell.detailTextLabel.text = category_desc;
+    NSLog(@"%@", category);
+    
     //セルに画像を挿入
     if (image != NULL) {
         cell.imageView.image = image;
     }else{
         cell.imageView.image = [UIImage imageNamed:@"carrot.png"];
     }
+    
     return cell;
 }
 
@@ -182,17 +199,14 @@
     // 読み取り画面を閉じます。
     [self dismissViewControllerAnimated:NO completion:nil];
     
-    //文字をパース
-    array = [result componentsSeparatedByString:@" "];
-    //カテゴリの文字列
-    category = [array objectAtIndex:1];
-    //期間の文字列
-    span = [array objectAtIndex:2];
+    //取得した文字列の解析
+    [self parseStrings:result];
+    
+    NSLog(@"%@", span);
     
     //カメラを起動する
     [self showImagePicker];
-    //セルを追加するtable:cellForRowAtIndexメソッドを呼び出す
-    [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
 //    [self insertNewRemindObject:result];
 }
 
@@ -202,6 +216,30 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
+- (void)parseStrings:(NSString*)result{
+    //取得した文字列の解析
+    array = [result componentsSeparatedByString:@" "];
+    //カテゴリの文字列
+    category = [NSMutableString stringWithString:[array objectAtIndex:1]];
+    [category deleteCharactersInRange:NSMakeRange(0, 9)];
+    NSLog(@"%@", category);
+    
+    category_desc = @"カテゴリ: ";
+    if([category isEqualToString:@"vegetable"]){
+        category_desc = [category_desc stringByAppendingString:@"野菜"];
+    }else{
+        category_desc = [category_desc stringByAppendingString:@"未分類"];
+    }
+
+    //期間の文字列
+    span = [NSMutableString stringWithString:[array objectAtIndex:2]];
+    [span deleteCharactersInRange:NSMakeRange(0, 5)];
+    NSLog(@"%@", span);
+    
+    span_desc = @"保存期間: ";
+    span_desc = [span_desc stringByAppendingString:span];
+//    span_desc = [span_desc stringByAppendingString:@"日間"];
+}
 
 //カメラの起動
 - (void)showImagePicker{
@@ -220,19 +258,23 @@
     
     image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    //①JPEGデータとしてNSDataを作成
-//    NSData *data = UIImageJPEGRepresentation(image, 0.8f);
-    
-    //②保存先をDocumentsディレクトリに指定
-//    NSString *path = [NSString stringWithFormat:@"%@/item.jpg",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]];
     
     [self dismissViewControllerAnimated:YES completion:^{
-//        self.imageView.image = image;
+
         //画像をアルバムに保存
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-        //③dataインスタンスをpathに保存
-//        [data writeToFile:path atomically:YES];
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), nil);
     }];
     
+}
+
+//写真のセーブが完了すると呼ばれる
+- (void) savingImageIsFinished:(UIImage *)_image
+      didFinishSavingWithError:(NSError *)_error
+                   contextInfo:(void *)_contextInfo
+{
+    NSLog(@"finished"); //仮にコンソールに表示する
+    //"table:cellForRowAtIndex"メソッドでセルを追加する
+    [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self insertNewObject:self];
 }
 @end
