@@ -10,11 +10,15 @@
 #import <UIKit/UIKit.h>
 #import <ZXingWidgetController.h>
 #import <QRCodeReader.h>
-
+#import <CoreData/CoreData.h>
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController <ZXingDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MasterViewController : UITableViewController <ZXingDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, UIDataSourceModelAssociation>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 

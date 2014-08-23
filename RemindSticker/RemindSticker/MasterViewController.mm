@@ -7,7 +7,7 @@
 //
 
 #import "MasterViewController.h"
-
+#import "CoreDataManager.h"
 #import "DetailViewController.h"
 
 @interface MasterViewController () {
@@ -27,6 +27,7 @@
     
     //カメラで撮った画像
     UIImage *image;
+    
 }
 @end
 
@@ -51,6 +52,12 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    //リストに追加
+    if(!span_desc && !category_desc){
+    [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self insertNewObject:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -117,6 +124,7 @@
     //セルに文字列を挿入
 //    NSDate *object = _objects[indexPath.row];
 //    cell.textLabel.text = [object description];
+    
     cell.textLabel.text = span_desc;
     cell.detailTextLabel.text = category_desc;
     NSLog(@"%@", category);
@@ -272,9 +280,82 @@
       didFinishSavingWithError:(NSError *)_error
                    contextInfo:(void *)_contextInfo
 {
-    NSLog(@"finished"); //仮にコンソールに表示する
+    NSLog(@"finished");
     //"table:cellForRowAtIndex"メソッドでセルを追加する
     [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     [self insertNewObject:self];
 }
+
+-(void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+    [super encodeRestorableStateWithCoder:coder];
+}
+
+-(void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super decodeRestorableStateWithCoder:coder];
+}
+
+//プロパティリストを使って保存
+/*
+- (void)saveToPlistWithArray:(NSArray *)dataArray
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [paths objectAtIndex:0];
+    NSString *filePath = [directory stringByAppendingPathComponent:@"data.plist"];
+    
+    BOOL successful = [dataArray writeToFile:filePath atomically:NO];
+    
+    if (successful) {
+        NSLog(@"%@", @"データの保存に成功");
+    }
+}
+
+- (void)loadFromPlistWithArray
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [paths objectAtIndex:0];
+    NSString *filePath = [directory stringByAppendingPathComponent:@"data.plist"];
+    NSArray *dataArray = [[NSArray alloc] initWithContentsOfFile:filePath];
+    
+    if (dataArray) {
+        for (NSString *data in array) {
+            NSLog(@"%@", data);
+        }
+    }
+    else {
+        NSLog(@"%@", @"データがありません。");
+    }
+}
+*/
+
+//オブジェクトアーカイブ 保存
+- (void)saveData{
+    NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filePath = [directory stringByAppendingPathComponent:@"data.dat"];
+    
+    //category_descとspan_descを保存
+    NSArray *dataArray = @[category_desc, span_desc];
+    BOOL successful = [NSKeyedArchiver archiveRootObject:dataArray toFile:filePath];
+    if (successful) {
+        NSLog(@"%@", @"データの保存に成功しました。");
+    }
+}
+
+//オブジェクトアンアーカイブ 復元
+- (NSArray *)loadData{
+    NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filePath = [directory stringByAppendingPathComponent:@"data.dat"];
+    
+    NSArray *dataArray = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    if (dataArray) {
+        for (NSString *data in dataArray) {
+            NSLog(@"%@", data);
+        }
+    } else {
+        NSLog(@"%@", @"データが存在しません。");
+    }
+    
+    return dataArray;
+}
+
 @end

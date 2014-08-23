@@ -18,10 +18,12 @@
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+    
     return YES;
 }
 
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     return YES;
 }
 							
@@ -50,6 +52,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    //[saveData];
 }
 
 -(BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
