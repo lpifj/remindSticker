@@ -29,6 +29,14 @@
     //カメラで撮った画像
     UIImage *image;
     
+    //セルの数
+    NSInteger *cellNum;
+    
+    //一つのセル情報を格納(category_desc, span_desc, image)
+    NSArray *dataSet;
+    
+    //dataセットを格納
+    NSMutableArray *dataSetArray;
 }
 @end
 
@@ -59,31 +67,41 @@
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    //span_descとcategory_descが空でなければリストに追加
-        
+    //配列の初期化
+    dataSetArray = [[NSMutableArray alloc] init];
+    
+    //loadDataが空でなければリストに追加
+    
         if([self loadData]!= nil){
             NSLog(@"loadDataを開始します");
             //オブジェクトの復元と代入
+            
             NSArray *loadData = [self loadData];
             
-//            if([loadData objectAtIndex:0]!= nil){
-//                category_desc = [NSString stringWithString:[loadData objectAtIndex:0]];
-//            }
-//            if([loadData objectAtIndex:1]!= nil){
-//                span_desc = [NSString stringWithString:[loadData objectAtIndex:1]];
-//            }
-//            if([loadData objectAtIndex:2]!= nil){
-//                image = [loadData objectAtIndex:2];
-//            }else{
-//                image = [UIImage imageNamed:@"carrot.png"];
-//            }
+                category_desc = [NSString stringWithString:[loadData objectAtIndex:0]];
+                span_desc = [NSString stringWithString:[loadData objectAtIndex:1]];
+                image = [loadData objectAtIndex:2];
+                
+                NSLog(@"category_descの中身%@", category_desc);
+                NSLog(@"span_descの中身%@", span_desc);
+                
+                [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+                [self insertNewObject:self];
+        }
+    /*
+    if([self loadData]!= nil){
+        NSLog(@"loadDataを開始します");
+        //オブジェクトの復元と代入
+        NSMutableArray *loadDataSetArray;
+        loadDataSetArray = [[NSMutableArray alloc] init];
+        loadDataSetArray = [self loadData];
+        
+        //dataSetを取り出す
+        for(NSArray *loadDataSet in loadDataSetArray){
             
-            category_desc = [NSString stringWithString:[loadData objectAtIndex:0]];
-            span_desc = [NSString stringWithString:[loadData objectAtIndex:1]];
-            image = [loadData objectAtIndex:2];
-//            if([loadData objectAtIndex:2]!= nil){
-//                image = [loadData objectAtIndex:2];
-//            }
+            category_desc = [NSString stringWithString:[loadDataSet objectAtIndex:0]];
+            span_desc = [NSString stringWithString:[loadDataSet objectAtIndex:1]];
+            image = [loadDataSet objectAtIndex:2];
             
             NSLog(@"category_descの中身%@", category_desc);
             NSLog(@"span_descの中身%@", span_desc);
@@ -91,7 +109,9 @@
             [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
             [self insertNewObject:self];
         }
-/*if(!(span_desc==nil) && !(category_desc==nil)){       }*/
+    }
+     */
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -244,8 +264,6 @@
     //取得した文字列の解析
     [self parseStrings:result];
     
-    NSLog(@"%@", span);
-    
     //カメラを起動する
     [self showImagePicker];
     
@@ -280,7 +298,6 @@
     
     span_desc = @"保存期間: ";
     span_desc = [span_desc stringByAppendingString:span];
-//    span_desc = [span_desc stringByAppendingString:@"日間"];
 }
 
 //カメラの起動
@@ -306,10 +323,9 @@
         //画像をアルバムに保存
         UIImageWriteToSavedPhotosAlbum(image, self, @selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), nil);
     }];
-    
 }
 
-//写真のセーブが完了すると呼ばれる
+//写真のセーブが完了した直後
 - (void) savingImageIsFinished:(UIImage *)_image
       didFinishSavingWithError:(NSError *)_error
                    contextInfo:(void *)_contextInfo
@@ -318,6 +334,9 @@
     //"table:cellForRowAtIndex"メソッドでセルを追加する
     [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     [self insertNewObject:self];
+    
+    //配列にセルの情報を全て保存
+    dataSet = @[category_desc, span_desc, image];
     
     //データをファイルで保存
     [self saveData];
@@ -372,6 +391,7 @@
     
     //category_descとspan_descを保存
     NSArray *dataArray = @[category_desc, span_desc, image];
+    
     BOOL successful = [NSKeyedArchiver archiveRootObject:dataArray toFile:filePath];
     if (successful) {
         NSLog(@"%@", @"データの保存に成功しました。");
@@ -379,13 +399,33 @@
     }
 }
 
+/*
+- (void)saveData{
+    NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filePath = [directory stringByAppendingPathComponent:@"data.dat"];
+    
+    //category_descとspan_descを保存
+//    NSArray *dataArray = @[category_desc, span_desc, image];
+    
+    //末尾にdataSetを追加
+    dataSetArray = [[NSMutableArray alloc] init];
+    
+    BOOL successful = [NSKeyedArchiver archiveRootObject:dataSetArray toFile:filePath];
+    if (successful) {
+        NSLog(@"%@", @"データの保存に成功しました。");
+        NSLog(@"%@", dataSetArray);
+    }
+}
+ */
+
 //オブジェクトアンアーカイブ 復元
 - (NSArray *)loadData{
     NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSString *filePath = [directory stringByAppendingPathComponent:@"data.dat"];
     
     NSArray *dataArray = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-    if (dataArray) {
+    
+    if (dataSetArray) {
         for (NSString *data in dataArray) {
             NSLog(@"%@", data);
         }
@@ -395,5 +435,24 @@
     
     return dataArray;
 }
+
+/*
+- (NSMutableArray *)loadData{
+    NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filePath = [directory stringByAppendingPathComponent:@"data.dat"];
+    
+    dataSetArray = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    
+    if (dataSetArray) {
+        for (NSString *data in dataSetArray) {
+            NSLog(@"%@", data);
+        }
+    } else {
+        NSLog(@"%@", @"データが存在しません。");
+    }
+    
+    return dataSetArray;
+}
+ */
 
 @end
