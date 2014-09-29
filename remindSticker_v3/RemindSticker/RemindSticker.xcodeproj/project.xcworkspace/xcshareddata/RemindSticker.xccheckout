@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DC523FF1-A80B-459D-9D3F-4A66FA419C20</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RemindSticker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9487ECE0-8B3C-4873-9440-C1725562A595</key>
+		<string>https://github.com/koheiikeda/remindSticker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>remindSticker_v3/RemindSticker/RemindSticker.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9487ECE0-8B3C-4873-9440-C1725562A595</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/koheiikeda/remindSticker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9487ECE0-8B3C-4873-9440-C1725562A595</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9487ECE0-8B3C-4873-9440-C1725562A595</string>
+			<key>IDESourceControlWCCName</key>
+			<string>remindSticker</string>
+		</dict>
+	</array>
+</dict>
+</plist>

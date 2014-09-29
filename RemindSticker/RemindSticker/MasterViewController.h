@@ -14,7 +14,7 @@
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController <ZXingDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, UIDataSourceModelAssociation>
+@interface MasterViewController : UITableViewController <ZXingDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 

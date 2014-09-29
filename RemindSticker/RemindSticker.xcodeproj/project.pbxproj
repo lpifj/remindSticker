@@ -31,7 +31,6 @@
 		55B5D813199A5093004F26E6 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D812199A5093004F26E6 /* libiconv.dylib */; };
 		55B5D816199A509D004F26E6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D814199A509D004F26E6 /* AddressBook.framework */; };
 		55B5D817199A509D004F26E6 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B5D815199A509D004F26E6 /* AddressBookUI.framework */; };
-		55B5D81B199B447D004F26E6 /* carrot.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B5D81A199B447D004F26E6 /* carrot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +95,6 @@
 		55B5D812199A5093004F26E6 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		55B5D814199A509D004F26E6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		55B5D815199A509D004F26E6 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		55B5D81A199B447D004F26E6 /* carrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = carrot.png; path = "../../../../Axis金の卵展/シールと導電テープ/使用イメージ作成の素材/carrot.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +187,6 @@
 		55B5D79C199A4E2A004F26E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				55B5D81A199B447D004F26E6 /* carrot.png */,
 				55B5D79D199A4E2A004F26E6 /* RemindSticker-Info.plist */,
 				55B5D79E199A4E2A004F26E6 /* InfoPlist.strings */,
 				55B5D7A1199A4E2A004F26E6 /* main.m */,
@@ -328,7 +325,6 @@
 				55B5D7AC199A4E2A004F26E6 /* Main_iPad.storyboard in Resources */,
 				55B5D7B4199A4E2A004F26E6 /* Images.xcassets in Resources */,
 				55B5D7A9199A4E2A004F26E6 /* Main_iPhone.storyboard in Resources */,
-				55B5D81B199B447D004F26E6 /* carrot.png in Resources */,
 				55B5D7A0199A4E2A004F26E6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -368,7 +368,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     
   // NSLog(@"wxh: %lu x %lu", width, height);
 
-  uint8_t* baseAddress = CVPixelBufferGetBaseAddress(imageBuffer); 
+  uint8_t* baseAddress = (uint8_t*)CVPixelBufferGetBaseAddress(imageBuffer);
   void* free_me = 0;
   if (true) { // iOS bug?
     uint8_t* tmp = baseAddress;
